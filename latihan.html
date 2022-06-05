@@ -1,0 +1,121 @@
+<script>
+
+// - Sekarang market tidak lagi hanya menjual buah, melainkan berbagai macam produk lainnya.
+// Produk yang dijual kini memiliki empat jenis berbeda. Ada produk yang akan digolongkan sebagai fastfood,
+//  kemudian cloth atau pakaian, elektronik dan juga buah.
+//  Jadi total ada tiga jenis produk baru yang akan kita jual selain buah.
+
+// - Keempat produk memiliki beberapa properties yang sama.
+//  Dan setiap produk juga akan memiliki properties yang sifatnya unik,
+//   artinya properties yang hanya ada di satu jenis produk saja.
+
+// - Properties yang akan ada pada semua jenis produk diantaranya :
+//     - category
+//     - name
+//     - price
+//     - stock
+
+// - Properties yang akan ada pada jenis produk fast food adalah expired :
+// berisi integer yang menunjukkan tahun dimana makanan ini tidak lagi layak untuk dikonsumsi
+
+// - Properties yang akan ada pada jenis produk cloth adalah size :
+// berisi satu buah huruf yang menunjukkan ukuran dari pakaian, terdapat empat huruf yaitu s, m, l, dan xl
+
+// - Properties yang akan ada pada jenis produk electronic adalah warranty :
+//  berisi string 'yes' atau 'no' untuk menunjukkan bahwa barang tersebut masih memiliki garansi atau tidak.
+
+// - Properties yang akan ada pada jenis produk buah  adalah sugarLevel :
+// berisi sebuah string yang memiliki tiga buah pilihan yaitu
+//  'low', 'medium', dan 'high' untuk memberi tahu tingkat kandungan gula yang ada pada buah
+
+// - Karena kini sudah memiliki jenis ategori produk.
+// Saat akan menambahkan produk baru, maka akan menentukan jenisnya terlebih dahulu sebelum menginput data lainnya
+// seperti nama dan harga. Karena setiap jenis produk memiliki properties uniknya masing - masing.
+// Maka nantinya pertanyaan yang muncul juga akan bersifat dinamis atau berbeda disetiap jenisnya.
+// Sebagai contoh saat kita sedang menginput produk yang termasuk jenis pakaian,
+// maka akan muncul prompt yang akan meminta kita untuk memasukkan informasi size pakaian tersebut.
+//  Kemudian jika kita sedang mencoba untuk menambahkan produk jenis elektronik,
+//  maka nanti akan ada pertanyaan mengenai status garansinya. Kurang lebih seperti itu.
+
+// - Mungkin hanya itu saja hal yang baru untuk versi market kali ini.
+//  Sisanya hanya perlu penyesuaian saja seperti pada proses belanja hingga user melakukan pembayaran.
+//  Karena sekarang data disimpan sudah dalam bentuk object, tidak lagi menggunakan array dua dimensi.
+
+let pilihan = 0
+    const keranjang = []
+
+class product{
+    constructor(nama,jumlah,harga,kategori){
+        this.nama = nama;
+        this.jumlah = jumlah;
+        this.harga = harga;
+        this.kategori = kategori;
+    }
+}
+class fastfood extends product{
+    constructor(nama, jumlah, harga,ategori, expired){
+        super(nama,jumlah,harga,kategori);
+        this.expired = expired;
+    }
+}
+class cloth extends product{
+    constructor(nama, jumlah, harga,ategori, size){
+      super(nama,jumlah,harga,kategori);
+        this.size = size;
+    }
+}
+class electronic extends product{
+    constructor(nama, jumlah, harga,ategori, waranty){
+        super(nama,jumlah,harga,kategori);
+        this.waranty = waranty;
+    }
+}    
+class buah extends product{
+    constructor(nama, jumlah, harga,kategori, sugarlevel){
+     super(nama,jumlah,harga,kategori);
+        this.sugarlevel = sugarlevel;
+    }
+}
+function showProduct(products, kat){
+    let infoProduk = "Products \n"
+        for(let i = 0;i<products.length; i++)
+        {
+
+       }
+}
+let produk = [
+    new buah("apel",10,10000,"fruits","Low"),
+    new buah("jeruk",5,5000,"fruits","High"),
+    new buah("nanas",8,9000,"fruits","Medium"),
+    new cloth("t-shirt",10,100000,"clothing","s"),
+    new cloth("suit",12,400000,"clothing","m"),
+    new cloth("jacket",8,250000,"clothing","xl"),
+    new fastfood("Hamburger",10,25000,"fastfood",2024),
+    new fastfood("FriedChicken",15,18000,"fastfood",2025),
+    new fastfood("Pizza",12,35000,"fastfood",2022),
+    new electronic("Laptop",10,20000000,"electronic","yes"),
+    new electronic("PC",9,38000000,"electronic","no"),
+];
+
+function productadmin(products)
+{
+    let pilihkat = prompt('pilih kategori produk yang ingin ditambahkan \n1.Fruits \n2.Cloth \n3.Fastfood \n4.Electronic')
+    let {nama, jumlah, harga,kategori,expired,size,waranty,sugarlevel} = product
+    let produk
+}
+
+while (pilihan != 5) {
+        pilihan = prompt(`
+         1. Daftar buah2 \n
+         2. Tambah buah \n 
+         3. Hapus buah \n
+         4. Beli buah \n 
+         5. Exit`)
+
+         if(pilihan == 1)
+        {
+            liatin(buah)
+         //menampilkan isi buah
+
+        }}
+</script>
